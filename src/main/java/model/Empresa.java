@@ -8,7 +8,7 @@ public class Empresa {
     private String email;
     private String endereco;
 
-    public Empresa(String nome, int cnpj, String email, String endereco) {
+    public Empresa(String nome, String cnpj, String email, String endereco) {
         setNome(nome);
         setCnpj(cnpj);
         this.email = email;
@@ -23,7 +23,7 @@ public class Empresa {
         return id;
     }
 
-    public int getCnpj() {
+    public String getCnpj() {
         return cnpj;
     }
 
@@ -51,5 +51,9 @@ public class Empresa {
             throw new IllegalArgumentException("CNPJ inválido");
         }
         this.cnpj = cnpj;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
