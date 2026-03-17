@@ -29,4 +29,12 @@ public class ItemPedido {
     public int getQuantidade() {
         return quantidade;
     }
+
+    @Override
+    public String toString() {
+        return "Item Pedido" +
+                "\nProduto: " + produto +
+                "\nQuantidade: " + quantidade +
+                "\nPreço Unitário: " + precoUnitario;
+    }
 }

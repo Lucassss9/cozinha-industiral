@@ -56,4 +56,14 @@ public class Empresa {
     public void setId(int id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "Empresa \n" +
+                "Id: " + id + '\n' +
+                "Nome: " + nome +
+                "CNPJ: " + cnpj + '\n' +
+                "E-mail:" + email + '\n' +
+                "Endereço: " + endereco;
+    }
 }
