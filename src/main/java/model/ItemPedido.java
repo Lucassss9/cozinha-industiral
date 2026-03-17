@@ -32,9 +32,7 @@ public class ItemPedido {
 
     @Override
     public String toString() {
-        return "Item Pedido" +
-                "\nProduto: " + produto +
-                "\nQuantidade: " + quantidade +
-                "\nPreço Unitário: " + precoUnitario;
+        return String.format("\n\t- %s | Qtd: %d | Unit: R$ %.2f | Subtotal: R$ %.2f",
+                produto.getNome(), quantidade, precoUnitario, getValorTotal());
     }
 }

@@ -2,36 +2,29 @@ package service;
 
 import model.Produto;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ProdutoService {
-    private List<Produto> produtos =  new ArrayList<>();
+    private Map<String, Produto> produtos =  new HashMap<>();
 
     public void adicionarProduto(Produto produto){
-        produtos.add(produto);
+        produtos.put(produto.getNome().toLowerCase(), produto);
     }
 
     public void listarProdutos(){
-        for(Produto produto : produtos) {
+        for(Produto produto : produtos.values()) {
             System.out.println(produto);
         }
     }
 
     public Produto buscarProdutoPorNome(String nome){
-        for(Produto produto : produtos) {
-            if(produto.getNome().equalsIgnoreCase(nome)) {
-                return produto;
-            }
-        }
-        return null;
+        return produtos.get(nome.toLowerCase());
     }
 
     public void removerProdutoPorNome(String nome) {
         Produto encontrado = buscarProdutoPorNome(nome);
 
-        if(encontrado != null) {
-            produtos.remove(encontrado);
-        }
+        produtos.remove(encontrado.getNome());
     }
 }

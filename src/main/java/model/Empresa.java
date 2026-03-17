@@ -59,11 +59,6 @@ public class Empresa {
 
     @Override
     public String toString() {
-        return "Empresa \n" +
-                "Id: " + id + '\n' +
-                "Nome: " + nome +
-                "CNPJ: " + cnpj + '\n' +
-                "E-mail:" + email + '\n' +
-                "Endereço: " + endereco;
+        return String.format("ID: %d | %s (CNPJ: %s)", id, nome, cnpj);
     }
 }

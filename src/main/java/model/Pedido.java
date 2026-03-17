@@ -51,11 +51,15 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return "Pedido" +
-                "\n Id: " + id +
-                "\nEmpresa: " + empresa +
-                "\nItens:" + itens +
-                "\nData e Hora do Pedido:" + dataHoraPedido +
-                '}';
+        return "\n========================================" +
+                "\n          DETALHE DO PEDIDO #" + id +
+                "\n========================================" +
+                "\nCLIENTE: " + empresa +
+                "\nDATA: " + dataHoraPedido +
+                "\n----------------------------------------" +
+                "\nITENS:" + itens +
+                "\n----------------------------------------" +
+                "\nTOTAL DO PEDIDO: R$ " + calcularTotalPedido() +
+                "\n========================================\n";
     }
 }
